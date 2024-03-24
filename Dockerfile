@@ -14,7 +14,7 @@ RUN /usr/bin/entrypoint winetricks --force -q dxsdk_jun2010
 
 FROM betterweb/alpine
 
-RUN apk add --no-cache make makedepend py3-pip wine zip
+RUN apk add --no-cache make makedepend jq py3-pip git wine zip
 RUN pip install --break-system-packages binary_reader crc
 RUN adduser -Ds /bin/sh wineuser
 
